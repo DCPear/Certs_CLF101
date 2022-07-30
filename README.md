@@ -65,9 +65,41 @@ https://digitalcloud.training/category/aws-cheat-sheets/aws-cloud-practitioner/
 |malicious attacks|<b>DDos Attack</b> <li> A Distributed Denial of Service Attack or DDoS attack is an attempt to make a machine or network resource unavailable temporarily or indefinitely, <li> most often by making excessive repeated access requests to the website using thousands of unique IP addresses. Basically, a hacker or malicious personal organization would overload the server with access requests so that real users can't access the website because it's to busy. AWS has a service called AWS Shield, which provides detection and automatic mitigations to minimize the effects of DDoS attack on your applications.  |
 |AWS Shield| <li> Provides detection and automatic mitigations <li> Minimise the effects of DDos attacks to your apps <li> Helps minimize application downtime and latency when an attack happens </br> There are 2 tiers in terms of protection and cost <ol><li> Standard tier - automatically enabled, free to use and protects against majority of common DDoS attacks, Get comprehensive availability protection against all known infrastructure attacks when used with CloudFront and Route 53. <li> Advanced tier- Continuous, 24/7 access to AWS DDoS response team, Near real-time visibility into events, integrates with AWS WAF, Provides higher-level protections, network and transport layer protections, and automated applications traffic monitoring </br> Financial protection against DDoS-realted spikes in charges for EC2, elastic load balancers, CloudFront, and Route 53. </br> Available globaly on all CloudFront and Route 53 Edge locations, Your web application can be hosted anywhere in the world and still be protected by AWS Shield. Comprehensive protection against DDoS catered to your budget and needs</ol> you can start with standard proction and upgrade as it scaled |
 |Inspector| provide your auditors and your development team a peace of mind knowing that the applications adhere to security standards set by the company and the industry as a whole. </br><li> Amazon Inspector is an automated security assessment service for your applications deployed on AWS. <LI> Automatically assess for exposure, vulnerabilities, and derivation from best practices <li> Generates details report to help check for vulnerabilities <li> Security teams can get reports validating that tests were performed <li> Reduce risk of introducing security issues during deployment and development <li> You can define standards and best practices <li> Or use the AWS constantly updated standards|
-|Trusted Adviser||
-|GuardDuty||
+|Trusted Adviser|<li> Guides provisioning of resources to follow AWS best practices <li> Scans your infrastructure and advises you on how it is or is not follwing AWS best practices <li> Based on five categories:cost optimization, performance, security, fault tolerance, service limits <li> Provides action recommendations to meet best practices </br> All AWS customers have access to seven core trusted advisor checks for free. <ol><li> S3 bucket permissions <li> Security groups-specific ports unrestricted <li> IAM use <li>MFA on root account <li> ESB public snapshots <li>RDS snapshots <li> Service limits</ol> </br>  For those with enterprise or business support plans, there are extended set of checks and recommendations available. </br> Full Trusted Advisor checks <ol><li>More types of checks on top of core checks <li> Notifications through weekly updates <li> Set up automated actions in response to alerts using CloudWatch <li> Programmatic access to scan results via AWS Support API</ol>|
+|GuardDuty| it's a threat detection service that monitors for malicious activity and unauthorized behavior to protect your AWS Cloud instance 24/7. <li> 24/7 threat detection service for the AWS cloud <li> Monitors for malicious activity and unauthorised behaviour <li> Analyzes events to send actionable alerts via CloudWatch <li> Amason GD uses machine learning, anomaly detection, and integrated threat intelligence to identify potential threats <li> Easy to deploy </br> <sub> In short  Amazon GuardDuty continuously monitors your AWS Cloud infrastructure, intelligently detects threats using machine learning and helps you take action immediately if a threat is found </sub>|
 
+## Core Services - Compute
+| Key word     | Description |
+| ----------- | ----------- |
+|Technology domain| Four parts </br> <li> Define methods of deploying and operating in the AWS Cloud <li> Define the AWS global infrastructure <li>Identify the core AWS services <li>Identify resources for technology support.|
+|EC2|Amazon Elastic Compute Cloud. it's one of the most widely used services in the AWS. Amazon EC2 allows you to launch applications and servers when you need them without upfront financial commitments. It's integrated with many other AWS services, is reliable and secure, and allows you or your company to quickly and inexpensively spin up instances of virtual servers for all of your different needs.<li>Virtual server running on AWS <li> Configurabl by number of virtual CPUs, GBs of RAM, size/type of storage, and network speed <li>Only charged for what you use, when you use it <li> Deploy extremely scalable and reliable virtual servers within minutes |
+|Elastic Beanstalk| If you're constantly frustrated by the amount of time you spend managing configuring servers, databases, firewalls and networks, perhaps its time you give AWS Elastic Beanstalk a try <li>Handles the deployment process, including the capacity provisioning, load balancing, auto scaling and application health monitoring. <li> You can upload services developed using JAVA, .NET, PHP, Node.js, Python, Ruby, Go and Docker <li> You retain control over resources at all times <li>  it's free to use and you only pay for the AWS resources needed to store and run the web applications you've deployed. <li> It automatically scales your applications up and down based on its specific needs. <li> complete freedom to select the AWS resources such as the EC2 Instance type that you want to use for your application <li> Allows manual management of infrastructure|
+| Elastic Beanstalk vs EC2|EC2 is Amazon's service that allows you to create a server (AWS calls these instances) in the AWS cloud. You pay by the hour and only what you use. You can do whatever you want with this instance as well as launch n number of instances. Elastic Beanstalk is one layer of abstraction away from the EC2 layer. |
+|Elastic Load Balancing| Elastic load balancers are highly available, secure, flexible, and monitorable allowing you to glean robust information about your traffic as well as providing you the confidence that your applications are up at all times. </br>Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. (so no single server is overloaded) <li>It monitors the health of its registered targets, and routes traffic only to the healthy targets. (Fault-tolerant) n<li> Scalable and secure  </br> <b> 3 types of elastic Load Balancing </b></br> Elastic Load Balancing supports the following types of load balancers: Application Load Balancers, Network Load Balancers, and Classic Load Balancers. Amazon ECS services can use these types of load balancer. Application Load Balancers are used to route HTTP/HTTPS (or Layer 7) traffic.|
+|Lambda| <li> Runs code (Lambda function) in response to an event . eg: user uploading an image  into an S3 bucket. user tapping a button on your mobile app to buy an item <li> Automatically runs uploaded code and scales applications <li> Pay only for the ode is running and each event trigger <li> No need to provision and maintain servers |
+|Lightsail|Amazon Lightsail is a virtual private server (VPS) provider and is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their applications on cloud (quick development or test environment spun up) <li>designed to scale, scalable with your project's growth <li>cost effective monthly fees <li> use it to deploy simple web applications, create websites, run your business's software, or spin up developer or test environments <li>User-friendly  one-click-to-launch services without engineering know-how<li> There are many preconfigured and ready-to-use operating systems, web apps, and development stacks.  eg : WordPress, Windows OS, Ubuntu and Node.js|
+|Deploying and operating in AWS||
+|AWS Global infrastructure||
+
+## Core Services - Storage
+| Key word     | Description |
+| ----------- | ----------- |
+|S3||
+|E;astic Block Store||
+|Snowball||
+|Storage Gateway||
+
+## Core Services - Database
+| Key word     | Description |
+| ----------- | ----------- |
+
+## Core Services - Network and content Delivery
+| Key word     | Description |
+| ----------- | ----------- |
+
+## Core Services - Management Tools
+| Key word     | Description |
+| ----------- | ----------- |
 
 ## Questions
 | Key word     | Description |
@@ -91,4 +123,12 @@ https://digitalcloud.training/category/aws-cheat-sheets/aws-cloud-practitioner/
 |In the shared responsibility model with AWS Cloud, who should manage identity and access?|the Only the customer will know which people should have access.|
 |In a well-architected framework, how should you implement infrastructure protection?|on all layers. Best practices require automated security on all systems.|
 |You are engaged in educational record management and want to port your operations to AWS. How should you start examining security issues?|Peruse the site aws.amazon.com/compliance/programs/.From there, you may examine the resources at aws.amazon.com/compliance/ferpa/.|
+|How does AWS GuardDuty deal with threats?|It constantly monitors activity and deploys machine learning techniques for analysis. AWS GuardDuty is continuously active.|
+|What does AWS Inspector examine?|application security. If you develop your own application, AWS Inspector can help you find any security flaws|
+|What action does AWS Trusted Advisor take upon implementation?|It looks at your setup and suggests changes to meet best practices. Security is just one issue that Trusted Advisor examines.|
+|Why would you employ federated users?|to integrate with external operations and across AWS systems. For example, you might integrate Microsoft Active Directory with AWS IAM.|
+|What is the purpose of a WAF?|to protect applications from malicious activity. A WAF, or web application firewall, protects your applications from web exploits.|
+|Why would you need the advanced instead of the standard AWS Shield?|to get real-time tools for balancing loads. The advanced AWS Shield provides more dynamic responses and financial protection.|
+|If you want to take the AWS CCP exam, what requirement must you meet?|fundamental knowledge through studying.This is the only requirement, although a basic understanding of IT services and their uses in the AWS Cloud is also recommended.|
+|What is the largest domain in terms of questions on the AWS CCP exam?|Technology Domain. This comprises 33 percent of the exam.|
 
