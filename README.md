@@ -89,8 +89,8 @@ https://digitalcloud.training/category/aws-cheat-sheets/aws-cloud-practitioner/
 ## Core Services - Storage
 | Key word     | Description |
 | ----------- | ----------- |
-|S3||
-|E;astic Block Store||
+|S3|AWS has a solution to all of your static file storage called Amazon Simple Storage Service or Amazon S3 <li> Object storage service: storing each file as sperate entity (object) <li> High availablity, security, and performance <li>Scalable <li> Charged only for waht you use <li> 99.999999999% durable |
+|Elastic Block Store||
 |Snowball||
 |Storage Gateway||
 
