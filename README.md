@@ -94,24 +94,48 @@ https://digitalcloud.training/category/aws-cheat-sheets/aws-cloud-practitioner/
 |Elastic Block Store| You can think of EBS volumes as external hard drives for your virtual servers, taking advantage of scalable, durable, and reliable storage options using Amazon EBS will make scaling your IT operations a breeze. <li> Raw, unformatted block device attached to an EC2 instance <li> Can add multiple EBS volumes to one EC2 instance <li> Use as file systems or hard drives <li> Dynamically change configurations to attached volumes via management console <li> Automatically replacted within its availability zone <li> Different types of EBS storage types for your needs and budgets <li> Persisitence block storage volumes: do not disappear when EC2 instances are rebooted <li> Can be encypted <li> Exist independetly of EC2 instances so can be moved to other instances|
 |Snowball| AWS Snowball is one of the very few hardware solutions from AWS<li>it is a data migration tool. <li> AWS will physically ship you a Snowball to move your data onto, and then mail it back so you can migrate huge amounts of data. <li>  The amount of data you can move into AWS Cloud ranges from 50 terabytes with regular Snowball up to 100 petabytes with a Snowmobile, a 45-foot-long ruggedized shipping container pulled by a semi-trailer truck <li> Usage fee: free for 10 days of onsite usage; extra usage for every extra day you keep it. <li> Service fee per job starting at $200 <li> Storage fee: storge fee for data transferred into s3 (but no transfer fee) <li> Snomobile: expensive!|
 |How snowball works|<img src="snowball.png" width="150"/> </br> For large amounts of data, the transfer up to the cloud could take months, even with a high speed Internet connection. With AWS Snowball the same transfer can be accomplished in less than a week using two Snowball devices, with a few days tacked on for shipping|
-|Storage Gateway| Basically, it creates a gate that connects your on-site users and devices to the resources stored in AWS Cloud with minimal latency.</br> <img src="HybridStorageSolution.png" width="150"/> </br>  It connects your on-premises storage with AWS Cloud Storage, providing a hybrid storage solution for your IT infrastructure. The service seamlessly integrates on-premises enterprise applications and corporate workflows with AWS's Cloud Storage Services through the use of a virtual machine installed onto an on-premises data centers host server. </br> AWS offers three types of Storage solutuions to fit your needs </br> <li> File based <li> Volume based <li>Tape 
-based|
+|Storage Gateway| Basically, it creates a gate that connects your on-site users and devices to the resources stored in AWS Cloud with minimal latency.</br> <img src="HybridStorageSolution.png" width="150"/> </br>  It connects your on-premises storage with AWS Cloud Storage, providing a hybrid storage solution for your IT infrastructure. The service seamlessly integrates on-premises enterprise applications and corporate workflows with AWS's Cloud Storage Services through the use of a virtual machine installed onto an on-premises data centers host server. </br> AWS offers three types of Storage solutuions to fit your needs </br> <li> File based <li> Volume based <li>Tape based|
 |AWS Storage Gateway: File Gateway| <li> Files stored as objects in S3 <li> 1:1 representation of each file <li> Asynchronously updates objects to S3 as local files are updated <li> Local cache to provide low-latency access to recently accessed files|
 |AWS Storage Gateway: Volume Gateway | <li> Upload files in blocks (like virtual hard drives) <li> Asynchronously backed up as point-in-time snapshots and stored as Elastic Block Store snapshots  <li> 2 types </br> <sub>Stored volume: complete copy on-premises:sends snapshots to AWS</sub></br> <sub> Cached volume:keeps most recently accessed data on-premises; comple copy on AWS</sub>|
 |AWS Storage Gateway: Volume Gateway|<li> Uses exisitng tape-based backup infrastructure to back up to virtual tapes <li> Data stored locally then asynchronously uploaded to S3 <li> Data can be archived using Amazon Glazier |
-|AWS Storage Gateway Pricing|<li>You'll pay for storage and to access the stored data <li> The quicker you can access the data, the more expensive the solution is <li> For example, data stored via tape gateway is much cheaper saved to S3 Glacier Deep Archive than S3 Glacier|
+|AWS Storage Gateway Pricing|<li>You'll pay for storage and to access the stored data <li> The quicker you can access the data, the more expensive the solution is <li> For example, data stored via tape gateway is much cheaper saved to S3 Glacier Deep Archive than S3 Glacier <li> Virtually unlimited throughput and storage <li> Serverless: no need to provision, manage, or update your own servers <li> DynamoDB is being utilized in many well known companies like Nikee, Snapchat Lyft and Netflix.|
+|RDS||
+|Aurora||
+|Redshift||
 
 ## Core Services - Database
 | Key word     | Description |
 | ----------- | ----------- |
+|Amazon DynamoDB|<li> Secure, scalable, fast, and flexible NoSQL database <li>  DynamoDB will adapt with your needs so that your application speed and stability remains high <li>DynamoDB is serverless which means that you don't have to provision, patch or manage any servers. <li>  AWS automatically scales your tables up and down to adjust for capacity and to maintain performance as well as maintaining stability with redundancies and fault tolerance.|
 
 ## Core Services - Network and content Delivery
 | Key word     | Description |
 | ----------- | ----------- |
+|VPC||
+|cloudFront||
+|Route 53||
 
 ## Core Services - Management Tools
 | Key word     | Description |
 | ----------- | ----------- |
+|CloudFormation||
+|CloudTrail||
+|CloudWatch||
+
+## Billing and pricing
+ Key word     | Description |
+| ----------- | ----------- |
+|Billing concepts||
+|Types of charges||
+|Consolidated billing||
+|cost calculators||
+|AWS Free Tier||
+|Support Plans||
+|Support Plan - Basic||
+|Support Plan - Developer||
+|Support Plan - Business||
+|Support Plan - Enterprise||
+|Support Plan - which one's best for you||
 
 ## Questions
 | Key word     | Description |
